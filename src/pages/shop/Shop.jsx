@@ -1,11 +1,25 @@
+import { PRODUCTS } from "../../products";
+import Product from "./Product";
+import "./shop.css"
 
-
-import React from 'react'
 
 const Shop = () => {
   return (
-    <div>shop</div>
-  )
-}
+    <div className="shop">
+      <div>
+        <h1>Jon's Shop</h1>
+        
+      </div>
+
+      <div className="products">
+        {PRODUCTS.map((product) => (
+          <Product key={product.id} data={product} />
+        ))}
+      </div>
+
+      
+    </div>
+  );
+};
 
 export default Shop;
